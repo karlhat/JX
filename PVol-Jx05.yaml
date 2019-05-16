@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+ name: pvvol-jx05
+ labels: 
+    volume-type: nfs
+    pv-name: pvvol-jx05
+spec:
+ capacity:
+  storage: 35Gi
+ accessModes:
+   - ReadWriteOnce
+ persistentVolumeReclaimPolicy: Retain
+ nfs:
+   path: /exports/jx/05
+   server: nfs.olsclab.net
+readOnly: false
