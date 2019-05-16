@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+ name: pvvol-jxrg
+ labels: 
+    volume-type: nfs
+    pv-name: pvvol-jxrg
+spec:
+ capacity:
+  storage: 200Gi
+ accessModes:
+   - ReadWriteOnce
+ persistentVolumeReclaimPolicy: Retain
+ nfs:
+   path: /exports/jx/registry
+   server: nfs.olsclab.net
+   readOnly: false
