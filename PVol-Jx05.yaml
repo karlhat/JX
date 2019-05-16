@@ -14,4 +14,4 @@ spec:
  nfs:
    path: /exports/jx/05
    server: nfs.olsclab.net
-readOnly: false
+   readOnly: false
